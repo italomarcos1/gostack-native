@@ -6,6 +6,8 @@ import {
 } from 'react-native';
 import { Colors, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
 
+import './config/ReactotronConfig';
+
 export default class App extends Component {
     render(){
         return (
