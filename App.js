@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   StyleSheet,
   View,
   Text,
 } from 'react-native';
+import { Colors, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
 
 export default class App extends Component {
     render(){
@@ -11,7 +12,7 @@ export default class App extends Component {
         <>
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionTitle}>First App</Text>
               <Text style={styles.sectionDescription}>
                 <ReloadInstructions />
               </Text>
@@ -47,4 +48,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
