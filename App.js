@@ -12,8 +12,8 @@ export default class App extends Component {
         <>
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>First App</Text>
-              <Text style={styles.sectionDescription}>
+              <Text style={styles.sectionTitle}>Welcome to React Native</Text>
+              <Text style={styles.welcome}>First App</Text>
                 <ReloadInstructions />
               </Text>
             </View>
@@ -45,6 +45,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '400',
     color: Colors.dark,
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
   },
 });
 
