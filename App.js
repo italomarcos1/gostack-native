@@ -46,5 +46,3 @@ const styles = StyleSheet.create({
     color: Colors.dark,
   },
 });
-
-export default App;
