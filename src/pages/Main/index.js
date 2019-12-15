@@ -42,7 +42,7 @@ export default class Main extends Component{
     }
 
     handleAddUser = async () => {
-        const {users, newUser } = this.state;
+        const { users, newUser } = this.state;
 
         this.setState({ loading: true });
 

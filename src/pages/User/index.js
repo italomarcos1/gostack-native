@@ -31,8 +31,8 @@ export default class User extends Component {
   }
 
   render() {
+    const { stars } = this.state;
     const { navigation } = this.props;
-    const { stars } = this.props;
 
     const user  = navigation.getParam('user');
 
