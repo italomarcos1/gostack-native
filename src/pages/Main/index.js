@@ -26,7 +26,7 @@ export default class Main extends Component{
     };
 
     async componentDidMount(){
-        const users = await AsyncStorage.getItem();
+        const users = await AsyncStorage.getItem('user');
 
         if (users) {
             this.setState({ users: JSON.parse(users) });
