@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Keyboard, ActivityIndicator, View } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../services/api';
 
 import { Container, Form, Input, SubmitButton, List } from './styles';
 import { User, Avatar, Name, Bio, ProfileButton, ProfileButtonText } from './styles';
-
 
 export default class Main extends Component{
     state = {
@@ -13,6 +13,22 @@ export default class Main extends Component{
         users: [],
         loading: false
     };
+
+    async componentDidMount(){
+        const users = await AsyncStorage.getItem();
+
+        if (users) {
+            this.setState({ users: JSON.parse(users) });
+        }
+    }
+
+    async componentDidUpdate(_, prevState){
+        const { users } = this.state;
+
+        if(prevState.users !== users) {
+            await AsyncStorage.setItem('users', JSON.stringify());
+        }
+    }
 
     handleAddUser = async () => {
         const {users, newUser } = this.state;
